@@ -1,0 +1,43 @@
+let currentGallery = [];
+let currentIndex = 0;
+
+function openGallery(images) {
+    currentGallery = images;
+    currentIndex = 0;
+
+    const modal = document.getElementById("galleryModal");
+    const modalImages = document.querySelector(".gallery-modal-images");
+    
+    // Clear previous images
+    modalImages.innerHTML = "";
+
+    // Load new images
+    images.forEach((image, index) => {
+        const img = document.createElement("img");
+        img.src = image;
+        img.alt = `Product ${index + 1}`;
+        if (index === 0) img.style.display = "block"; // Display the first image
+        modalImages.appendChild(img);
+    });
+
+    modal.style.display = "block";
+}
+
+function closeGallery() {
+    const modal = document.getElementById("galleryModal");
+    modal.style.display = "none";
+}
+
+function nextImage() {
+    const images = document.querySelectorAll(".gallery-modal-images img");
+    images[currentIndex].style.display = "none"; // Hide current image
+    currentIndex = (currentIndex + 1) % currentGallery.length; // Move to next
+    images[currentIndex].style.display = "block"; // Show next image
+}
+
+function prevImage() {
+    const images = document.querySelectorAll(".gallery-modal-images img");
+    images[currentIndex].style.display = "none"; // Hide current image
+    currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length; // Move to previous
+    images[currentIndex].style.display = "block"; // Show previous image
+}
