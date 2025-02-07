@@ -394,8 +394,8 @@ background-size: cover;
 }
 
 .sidemenu__item-inner {
-	font-size: 0.9rem;
-    font-family: 'Assistant';
+	font-size: 1.37rem;
+    font-family:'Inconsolata', 'Assistant', monospace;
 	display: block;
 	transform: translate3d(0,100%,0);
 }
@@ -417,6 +417,7 @@ background-size: cover;
 
 .menu__item-hoverlink {
 color: var(--color-bgitem2);
+font-family:'Inconsolata', 'Assistant', monospace;
 	font-weight: bold;
 	text-transform: capitalize;
 	position: relative;
@@ -611,6 +612,7 @@ color: var(--color-bgitem2);
 .cta-button-gallery {
     display: inline-block;
     padding: 10px 20px;
+    font-family: 'Inconsolata', 'Assistant', monospace;
     font-size: 14px;
     font-weight: bold;
     color: var(--color-link);

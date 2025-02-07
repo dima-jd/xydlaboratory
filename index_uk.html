@@ -100,8 +100,9 @@
                 <h3 class="slideshow__item-title">Друк на дитячому одязі</h3>
                 <p class="slideshow__item-subtitle">Безпека і комфорт. Наш друк на дитячому одязі створений з турботою про наймолодших.</p>
                 <div class="cta-button-container">
-                    <button class="cta-button-gallery" data-images='["img/shoper5.jpg", "img/shoper2.jpg", "img/shoper3.jpg"]'>Приклади робіт</button>
-                </div>
+                                        <button class="cta-button-gallery" data-images='["img/kids1.jpg", "img/kids2.jpg", "img/kids3.jpg"]'>Приклади робіт
+                                </button>
+                            </div>
             </div>
         </div>
         <div class="slideshow__item">
@@ -113,7 +114,11 @@
                 <h3 class="slideshow__item-title">Друк постерів</h3>
                 <p class="slideshow__item-subtitle">Ваші ідеї на папері. Ми створюємо постери, які залишають незабутнє враження.</p>
                 <div class="cta-button-container">
-                    <button class="cta-button-gallery" data-images='["img/shoper5.jpg", "img/shoper2.jpg", "img/shoper3.jpg"]'>Приклади робіт</button>
+                    <button 
+                                            class="cta-button-gallery" 
+                                            data-images='["img/poster2.jpg", "img/poster3.jpg", "img/poster4.jpg", "img/poster5.jpg"]'>
+                                Приклади робіт
+                                        </button>
                 </div>
             </div>
         </div>
@@ -126,7 +131,11 @@
                 <h3 class="slideshow__item-title">Друк на шоперах</h3>
                 <p class="slideshow__item-subtitle">Стиль і функціональність. Шопери, які ви дійсно захочете носити.</p>
                 <div class="cta-button-container">
-                    <button class="cta-button-gallery" data-images='["img/shoper5.jpg", "img/shoper2.jpg", "img/shoper3.jpg"]'>Переглянути вироби</button>
+                     <button 
+                                            class="cta-button-gallery" 
+                                            data-images='["img/3.jpg", "img/shoper2.jpg", "img/shoper3.jpg", "img/shoper4.jpg", "img/shoper5.jpg", "img/shoper6.jpg", "img/shoper7.jpg", "img/shoper8.jpg", "img/shoper9.jpg"]'>
+                                Приклади робіт
+                                        </button>
                 </div>
             </div>
         </div>
@@ -146,7 +155,7 @@
             </div>
             <span class="slideshow__item-number"></span>
             <div class="slideshow__item-titlewrap">
-                <h3 class="slideshow__item-title">Індивідуальні корпоративні замовлення</h3>
+                <h3 class="slideshow__item-title">Індивідуальні Корпоративні Замовлення</h3>
                 <p class="slideshow__item-subtitle">Ми обробляємо корпоративні замовлення будь-якого масштабу. Від малих партій до великих обсягів, ми гарантуємо високу якість друку відповідно до потреб вашого бізнесу.</p>
             </div>
         </div>
@@ -161,7 +170,7 @@
                     font-weight: normal;
                     position: relative;
                     padding: 0px 0 0 1rem;
-                ">Розпочати замовлення</h3>
+                ">Розпочати Замовлення</h3>
                 <p class="slideshow__item-subtitle">Високоякісний трафаретний друк без мінімального замовлення.</p>
                 <a href="https://t.me/xydlab" class="cta-button">Telegram</a>
                             <a href="https://wa.me/972504432225" class="cta-button">Whatsup</a>
@@ -196,7 +205,7 @@
 					<a class="intro__enter animatable">Студiя</a>
 				</div>
 				<div class="intro__content intro__content--second animatable">
-                    <a href="mailto:order@xydlaboratory.space"><h3 class="intro__content-title animatable">order@xydlaboratory.space</h3></a><p class="intro__content-text animatable">contact us</p>
+                    <a href="mailto:xydtalk@gmail.com"><h3 class="intro__content-title animatable">order@xydlaboratory.space</h3></a><p class="intro__content-text animatable">contact us</p>
                     
                 </div>
                 <div class="intro__content intro__content--forth animatable">
@@ -216,9 +225,9 @@
         <div class="menu__item-inner">
             <div class="mainmenu">
                 <p class="label1 label--topleft label--line">Напишіть нам на електронну пошту:</p>
-                <a href="mailto:order@xydlaboratory.space" class="mainmenu__item" style="text-decoration: underline; font-weight: bold">order@</a>
-                <a href="mailto:order@xydlaboratory.space" class="mainmenu__item" style="text-decoration: underline;font-weight: bold">xydlaboratory.</a>
-                <a href="mailto:order@xydlaboratory.space" class="mainmenu__item" style="text-decoration: underline;font-weight: bold">space</a>
+                <a href="mailto:xydtalk@gmail.com" class="mainmenu__item" style="text-decoration: underline; font-weight: bold">order@</a>
+                <a href="mailto:xydtalk@gmail.com" class="mainmenu__item" style="text-decoration: underline;font-weight: bold">xydlaboratory.</a>
+                <a href="mailto:xydtalk@gmail.com" class="mainmenu__item" style="text-decoration: underline;font-weight: bold">space</a>
             </div>
             <p class="label label--topleft label--vert-mirror">важливі речі</p>
             <p class="label label--bottomright label--vert">створено sadage</p>
@@ -265,5 +274,27 @@
 		<script src="js/TweenMax.min.js"></script>
 		<script src="js/anime.min.js"></script>
 		<script src="js/demo.js"></script>
+        <script src="js/modal.js"></script>
+<script>
+    
+
+    // Attach event listeners for buttons
+    document.querySelectorAll(".cta-button-gallery").forEach((button) => {
+    button.addEventListener("click", () => {
+        try {
+            const images = JSON.parse(button.dataset.images); // Parse the images
+            console.log("Images:", images); // Debugging
+            if (images && images.length > 0) {
+                window.gallery.open(images); // Open the gallery
+            } else {
+                console.error("No images provided.");
+            }
+        } catch (error) {
+            console.error("Invalid data-images format:", error);
+        }
+    });
+});
+</script>
+
 	</body>
 </html>
